@@ -1,0 +1,339 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(12,3,51,0.3),rgba(12,3,51,0.3));
+    position: relative;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav{
+    width:100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo{
+    width: 80px;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+}
+
+.content{
+    text-align: center;
+}
+.content h1{
+    font-size: 160px;
+    color: #fff;
+    font-weight: 600;
+}
+.content a{
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    font-size: 24px;
+    border: 2px solid #fff;
+    padding: 14px 70px;
+    border-radius: 50px;
+    margin-top: 20px;
+}
+
+.back-video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1; 
+}
+
+@media (min-aspect-ratio: 16/9){
+    .back-video{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9){
+    .back-video{
+        width: auto;
+        height: 100%;
+    }
+}
+.logo1{
+    width: 150px;
+    margin-bottom: 4px;
+}
+.vision{
+    text-align: center;
+    width: 60%;
+}
+
+.mission{
+    text-align: center;
+    width:60%;
+}
+
+.container1{
+    display: flex;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+  }
+
+.container{
+  max-width: 1170px;
+  margin:auto;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+ul{
+  list-style: none;
+}
+.footer{
+    background:black;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h4::before{
+  content: '';
+  position: absolute;
+  left:0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer-col ul li:not(:last-child){
+  margin-bottom: 10px;
+}
+.footer-col ul li a{
+  font-size: 16px;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 300;
+  color: white;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+  color: #ffffff;
+  padding-left: 8px;
+}
+.footer-col .social-links a{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255,255,255,0.2);
+  margin:0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+  color: #24262b;
+  background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+
+iframe{
+  height: 200px;
+  width:300px;
+
+}
+
+@import url(https://fonts.googleapis.com/css?family=Oswald|Roboto|Slabo+27px);
+@import 'bourbon';
+
+body{
+  background:#ececec;
+}
+
+h1{
+  font-size:32px;
+  margin-top:30px;
+  font-family: 'Oswald', sans-serif;  
+  text-align:center;
+}
+.blog-wrapper{
+  padding:15px;
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  flex-wrap:wrap;
+  .blog-card{
+    @include transition(.3s);
+    max-width:300px;
+    margin:15px;
+    background:#fff;
+    border:1px solid green;
+    text-align:center;
+    cursor:pointer;
+    &:hover{
+      box-shadow: 0 3px 10px 0 rgba(0,0,0,.1);
+      .card-img{
+        img{
+          opacity:0.8;
+        }
+      }
+    }
+    .card-img{
+      position:relative;
+      text-align:center;
+      background:green;
+      img{
+        @include transition(.3s);
+        max-height:180px;
+        width:100%;
+        border-bottom:4px solid green;
+      }
+      &:before{
+        content:'';
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        margin-left: -10px;
+        width: 0;
+        height: 0;
+        border-top: solid 10px green;
+        border-left: solid 10px transparent;
+        border-right: solid 10px transparent;
+      }
+      h1{
+        position:absolute;
+        margin:0;
+        font-size:42px;
+        bottom:15px;
+        width:100%;
+        color:#fff;
+        font-family: 'Slabo 27px', serif;
+      }
+    }
+    .card-details{
+      margin-top:30px;
+      font-family: 'Roboto', sans-serif;
+      color:#3C3C3C;
+      span{   
+        padding:0 30px;
+        i{
+          margin-right:5px;
+        }
+        
+      }
+    }
+    .card-text{
+      padding:30px 15px;
+      font-family: 'Roboto', sans-serif;
+      line-height:22px;
+    }
+    .read-more{
+      @include transition(.3s);
+      display:inline-block;
+      width:auto;
+      text-align:center;
+      text-transform:uppercase;
+      background:green;
+      color:#fff;
+      padding:15px;
+      margin-bottom:30px;
+      font-family: 'Oswald', sans-serif;
+      &:hover{
+        background: darken(green,20%);
+      }
+    }
+  }
+}
+
+ 
